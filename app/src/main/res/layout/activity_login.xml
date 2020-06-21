@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginActivity"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/logindDetailsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Enter Login Details : "
+            android:textColor="@color/darkBlue"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginImage" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="70dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:clickable="true"
+            android:foreground="?android:selectableItemBackground"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginPassword"
+            app:layout_constraintWidth_percent="0.6"></Button>
+
+        <EditText
+            android:id="@+id/loginPassword"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:hint="Password"
+            android:backgroundTint="@color/darkBlue"
+            android:inputType="textPassword"
+            android:nextFocusDown="@id/loginButton"
+            android:textSize="20dp"
+            android:maxLines="1"
+            android:lines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginEmail"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <EditText
+            android:id="@+id/loginEmail"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:hint="Email Id"
+            android:backgroundTint="@color/darkBlue"
+            android:nextFocusDown="@id/loginPassword"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logindDetailsText"
+            app:layout_constraintWidth_percent="0.8"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            ><requestFocus /></EditText>
+        <ImageView
+            android:id="@+id/loginImage"
+            android:layout_margin="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintDimensionRatio="1:0.35"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+
+        <TextView
+            android:id="@+id/loginCreate"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Don't have an Account? Create One"
+            android:textColor="@color/darkBlue"
+            android:clickable="true"
+            android:foreground="?android:selectableItemBackground"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginButton"
+            app:layout_constraintWidth_percent="0.8"
+
+            ></TextView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
